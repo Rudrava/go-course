@@ -16,6 +16,7 @@ func contactHandler(w http.ResponseWriter, r *http.Request) {
 }
 func fourOhFourHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	w.WriteHeader(http.StatusNotFound)
 	fmt.Fprint(w, "<h1>404 Not Found</h1>")
 }
 
